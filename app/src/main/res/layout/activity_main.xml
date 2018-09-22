@@ -6,13 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageButton
+        android:id="@+id/ib_atras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_buscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <EditText
+        android:id="@+id/et_buscar"
+        android:layout_width="310dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="Lista"
+        android:inputType="textPersonName"
+
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toStartOf="@+id/ib_buqueda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_atras" />
+
+    <ImageButton
+        android:id="@+id/ib_buqueda"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_buscar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+    <ListView
+        android:id="@+id/lv_listas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="272dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_buqueda" />
 
 </android.support.constraint.ConstraintLayout>
